@@ -1,6 +1,7 @@
 import { useState , useEffect} from 'react'
 import axios from 'axios'
 import './WeatherApp.css'
+import WeatherContainer from '../WeatherContainer/WeatherContainer';
 
 export default function WeatherApp() {
   const [weatherData, setWeatherData] = useState(null);
@@ -36,9 +37,8 @@ export default function WeatherApp() {
   } 
 
   return(
-    <div className='WeatherContainer'>
-      <div>We got weather!</div>
-      <div>{JSON.stringify(weatherData)}</div>
+    <div className='WeatherBox'>
+      <WeatherContainer weatherData={weatherData}/>
     </div>
   )
-}
+};
