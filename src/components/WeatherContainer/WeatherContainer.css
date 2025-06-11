@@ -1,25 +1,63 @@
 .WeatherContainer{
   display: flex;
-  height: 50vh;
-  width: 50vw;
-  background-color: wheat;
+  height: 350px;
+  width: 300px;
+  background-image: linear-gradient(to bottom right,#1E90FF 20%, #483D8B);
   flex-flow: column;
   justify-content: space-around;
-  padding: 0.5vh 0.5vw;
+  border-radius: 25px;
+  box-shadow: 5px 5px 3px darkslategray;
+
 }
 
 .WeatherRow{
   display: flex;
-  height: 20vh;
+  height: 130px;
   width: 100%;
   flex-flow: row;
   justify-content: space-evenly;
 }
 
+.heading{
+  /* border-bottom: 3px dotted black; */
+  background-color: #1E90FF;
+  border-radius: 25px 25px 0 0;
+}
+
 .WeatherObject{
   display: flex;
-  height: 20vh;
-  width: 10vw;
+  height: 100%;
+  width: 135px;
   justify-content: center;
   align-items: center;
+}
+
+.location{
+  font-weight: bold;
+}
+
+.temp{
+  font-size: xxx-large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.cond{
+  font-size: large; 
+}
+
+.unit{
+  font-size: small; 
+}
+
+.details{
+  width: 100px;
+  font-size: large;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  padding-right: 15px;
 }
