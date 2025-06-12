@@ -11,9 +11,10 @@ export default function WeatherApp() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
+        const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
         const result = await axios.get('http://api.weatherapi.com/v1/current.json', {
           params: {
-            key: '32b3f84daada42eb86970134251006',
+            key: apiKey,
             q: 'Chandigarh',
             aqi: 'yes'
           }
