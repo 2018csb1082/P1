@@ -17,14 +17,9 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 20px;
-}
-
-.cond{
-  font-size: large; 
-}
-
-.unit{
-  font-size: small; 
+  .cond{
+    font-size: large; 
+  }
 }
 
 .details{
@@ -33,6 +28,8 @@
   font-size: medium;
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
-  padding-right: 10px;
+  align-items: flex-start;
+  .unit{
+    font-size: small; 
+  }
 }

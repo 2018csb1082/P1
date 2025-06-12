@@ -8,7 +8,6 @@ import GeneralObject from './../WeatherDetails/GeneralObject';
 
 import { FaWind } from "react-icons/fa";
 import { WiDust } from "react-icons/wi";
-import { WiHumidity } from "react-icons/wi";
 
 export default function WeatherContainer(weatherData) {
   return (
@@ -37,7 +36,7 @@ export default function WeatherContainer(weatherData) {
           unit={""}
         />
         <GeneralObject
-          icon={<WiHumidity />} 
+          icon={<></>} 
           detail_heading={"Humidity"} 
           detail_num={weatherData.weatherData.current.humidity} 
           unit={"%"}
