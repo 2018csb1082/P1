@@ -1,5 +1,6 @@
 import { useState , useEffect} from 'react'
 import axios from 'axios'
+import { PulseLoader } from "react-spinners";
 import './WeatherApp.css'
 import WeatherContainer from '../WeatherContainer/WeatherContainer';
 
@@ -30,11 +31,22 @@ export default function WeatherApp() {
   }, []);
 
   if (loading) {
-    return(<div className='WeatherLoading'>Loading...</div>);
+    return(
+      <div className='WeatherBox'>
+        <PulseLoader 
+          size={30}
+          color='#483D8B'
+          speedMultiplier={0.7}
+        />
+      </div>
+    );
   }
 
   if (error != "") {
-    return(<div className='WeatherError'>{error}</div>);
+    return(<div className='ErrorBox'>
+      <div className='ErrorObject top'>{"Something went wrong :("}</div>
+      <div className='ErrorObject bottom'>{error}</div>
+    </div>);
   } 
 
   return(
