@@ -6,3 +6,32 @@
     justify-content: center;
     align-items: center;
 }
+
+.ErrorBox {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ErrorObject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: fit-content;
+    padding: 20px 20px;
+    /* border-radius: 10%; */
+}
+
+.ErrorObject.top {
+  background-image: linear-gradient(to right, darkslategray, black);
+  border-radius: 20px 20px 0px 0px;
+}
+.ErrorObject.bottom {
+  background-color: #CD5C5C;
+  border-radius: 0px 0px 20px 20px;
+}
