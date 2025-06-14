@@ -1,0 +1,35 @@
+.SearchBarContainer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.SearchIcon {
+  width: 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBox{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchInput{
+  font-size: x-large;
+  color: darkslategray;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  caret-color: transparent;
+  outline: none;
+}
