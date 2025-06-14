@@ -4,19 +4,21 @@ import { PulseLoader } from "react-spinners";
 import './WeatherApp.css'
 import WeatherContainer from '../WeatherContainer/WeatherContainer';
 
-export default function WeatherApp() {
+export default function WeatherApp({city}) {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    setLoading(true);
+    setError("");
     const fetchWeather = async () => {
       try {
         const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
         const result = await axios.get('http://api.weatherapi.com/v1/current.json', {
           params: {
             key: apiKey,
-            q: 'Chandigarh',
+            q: city,
             aqi: 'yes'
           }
         });
@@ -27,15 +29,24 @@ export default function WeatherApp() {
         setLoading(false);
       }
     };
-    fetchWeather();
-  }, []);
+    if (city != "")
+      fetchWeather();
+  }, [city]);
+
+  if (city === "") {
+    return(
+      <div className='WeatherBox'>
+        Type in your city...
+      </div>
+    );
+  }
 
   if (loading) {
     return(
       <div className='WeatherBox'>
         <PulseLoader 
           size={30}
-          color='#483D8B'
+          color='#CD5C5C'
           speedMultiplier={0.7}
         />
       </div>
