@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setDebounceCity(city);
-    }, 700);
+    }, 500);
     return() => clearTimeout(timeout);
   }, [city]);
 

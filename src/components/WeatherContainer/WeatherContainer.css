@@ -2,12 +2,11 @@
   display: flex;
   height: 350px;
   width: 300px;
-  background-image: linear-gradient(to bottom right,#1E90FF 20%, #483D8B);
+  background-image: linear-gradient(to bottom right,#E9967A 20%, #CD5C5C);
   flex-flow: column;
   justify-content: space-around;
   border-radius: 25px;
-  box-shadow: 5px 5px 3px darkslategray;
-
+  box-shadow: 0px 0px 10px 5px #FFB6C1;
 }
 
 .WeatherRow{
@@ -19,6 +18,6 @@
 }
 
 .heading{
-  background-color: #1E90FF;
+  background-color: #E9967A ;
   border-radius: 25px 25px 0 0;
 }

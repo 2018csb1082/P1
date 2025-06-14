@@ -46,7 +46,7 @@ export default function WeatherApp({city}) {
       <div className='WeatherBox'>
         <PulseLoader 
           size={30}
-          color='#483D8B'
+          color='#CD5C5C'
           speedMultiplier={0.7}
         />
       </div>
