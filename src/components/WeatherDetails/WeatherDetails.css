@@ -7,6 +7,9 @@
 }
 
 .location{
+  /* height: 100px;
+  width: 100%;
+  overflow: hidden; */
   font-weight: bold;
 }
 
@@ -25,10 +28,10 @@
 .details{
   max-width: 100px;
   width: fit-content;
-  font-size: medium;
+  font-size: x-large;
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: space-around;
   .unit{
     font-size: small; 
   }
