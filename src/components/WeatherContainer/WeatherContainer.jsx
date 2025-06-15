@@ -7,7 +7,7 @@ import IconObject from './../WeatherDetails/IconObject';
 import GeneralObject from './../WeatherDetails/GeneralObject';
 
 import { FaWind } from "react-icons/fa";
-import { WiDust } from "react-icons/wi";
+import { WiHumidity } from "react-icons/wi";
 
 export default function WeatherContainer(weatherData) {
   return (
@@ -25,19 +25,19 @@ export default function WeatherContainer(weatherData) {
       <div className='WeatherRow'>
         <GeneralObject
           icon={<FaWind />} 
-          detail_heading={"Wind"} 
-          detail_num={weatherData.weatherData.current.wind_kph} 
-          unit={"kmph"}
+          detail_heading={""} 
+          detail_num={Math.round(weatherData.weatherData.current.wind_kph)} 
+          unit={"kph"}
         />
         <GeneralObject
-          icon={<WiDust />} 
+          icon={<></>} 
           detail_heading={"AQI"} 
           detail_num={Math.round(weatherData.weatherData.current.air_quality.pm2_5)} 
           unit={""}
         />
         <GeneralObject
-          icon={<></>} 
-          detail_heading={"Humidity"} 
+          icon={<WiHumidity />} 
+          detail_heading={""} 
           detail_num={weatherData.weatherData.current.humidity} 
           unit={"%"}
         />

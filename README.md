@@ -1,6 +1,8 @@
 # 🌤️ Weather Widget App
 
-A simple React weather widget that displays the **current weather** of your city in a clean, compact format. It fetches real-time data from [WeatherAPI](https://www.weatherapi.com/) and presents it in an elegant card layout.
+A simple React weather widget that displays the **current weather** of any searched city in a clean, compact format. It fetches real-time data from [WeatherAPI](https://www.weatherapi.com/) and presents it in an elegant card layout.
+
+Now live at: **[https://2018csb1082.github.io/Weather-App/](https://2018csb1082.github.io/Weather-App/)**
 
 ![screenshot](./src/assets/final_product/screenshot.PNG)
 
@@ -10,6 +12,7 @@ A simple React weather widget that displays the **current weather** of your city
 
 The widget shows:
 
+- 🔍 **Search support** for any location
 - 🏙️ City name
 - 🌡️ Temperature (°C)
 - 🌤️ Weather condition (text + icon)
@@ -21,12 +24,14 @@ The widget shows:
 
 ## 🛠️ Tech Stack
 
-- HTML  
-- CSS (Flexbox for layout)  
-- JavaScript  
-- React  
-- Axios  
-- react-icons  
+- JavaScript
+- React
+- HTML
+- CSS
+- Vite
+- Axios
+- react-icons
+- **GitHub Pages** (for deployment)
 
 ---
 
@@ -58,7 +63,9 @@ yarn install
 VITE_WEATHER_API_KEY=your_api_key_here
 ```
 
-### 5. Run the app
+> ⚠️ Make sure the `.env` file is at the root of your project (same level as `package.json`)
+
+### 5. Run the app locally
 
 ```bash
 npm run dev
@@ -66,12 +73,18 @@ npm run dev
 yarn dev
 ```
 
+### 6. Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
 ---
 
 ## 🔌 API Used
 
 ```http
-GET http://api.weatherapi.com/v1/current.json
+GET https://api.weatherapi.com/v1/current.json
 ```
 
 ---
@@ -80,15 +93,32 @@ GET http://api.weatherapi.com/v1/current.json
 
 ```
 src/
+├── App.css
+├── App.jsx
+├── index.css
+├── main.jsx
 ├── assets/
+│   ├── dummy_data.json
 │   └── final_product/
+│       ├── error.PNG
+│       ├── loading.PNG
 │       └── screenshot.PNG
 ├── components/
-│   └── WeatherContainer.jsx
-├── App.jsx
-├── main.jsx
-├── styles/
-│   └── WeatherContainer.css
+│   ├── SearchBar/
+│   │   ├── SearchBar.css
+│   │   └── SearchBar.jsx
+│   ├── WeatherApp/
+│   │   ├── WeatherApp.css
+│   │   └── WeatherApp.jsx
+│   ├── WeatherContainer/
+│   │   ├── WeatherContainer.css
+│   │   └── WeatherContainer.jsx
+│   └── WeatherDetails/
+│       ├── GeneralObject.jsx
+│       ├── IconObject.jsx
+│       ├── LocationObject.jsx
+│       ├── TempObject.jsx
+│       └── WeatherDetails.css
 ```
 
 ---
@@ -97,7 +127,7 @@ src/
 
 - Auto-location detection via geolocation API  
 - Extended forecast (5-day / hourly)  
-- Dark mode toggle
+- Dark mode toggle  
 
 ---
 
@@ -107,4 +137,5 @@ MIT License © [Daksh Sharma] 2025
 
 ---
 
-🔗 GitHub Repo: [https://github.com/2018csb1082/Weather-App](https://github.com/2018csb1082/Weather-App)
+🔗 GitHub Repo: [https://github.com/2018csb1082/Weather-App](https://github.com/2018csb1082/Weather-App)  
+🌐 Live Site: [https://2018csb1082.github.io/Weather-App/](https://2018csb1082.github.io/Weather-App/)

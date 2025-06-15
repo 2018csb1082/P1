@@ -15,7 +15,7 @@ export default function WeatherApp({city}) {
     const fetchWeather = async () => {
       try {
         const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-        const result = await axios.get('http://api.weatherapi.com/v1/current.json', {
+        const result = await axios.get('https://api.weatherapi.com/v1/current.json', {
           params: {
             key: apiKey,
             q: city,
